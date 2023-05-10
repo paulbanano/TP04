@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action='@Url.Action("GuardarPaquete")'>
+        <h1>Destinos:</h1>
+        <ol>
+            @foreach (string destino in ViewBag.ListaDestinos)
+            {
+                <l1>@destino</l1>
+            }
+        </ol>
+        <p>Seleccione una opcion </p><input type="number" max="10" min="1" step="1">
+        <h1>Hoteles</h1>
+        <ol>
+            @foreach (string hoteles in ViewBag.ListaHoteles)
+            {
+                <li><img src="~/img/@hoteles">z</li>
+            }
+        </ol>
+        <p>Seleccione una opcion </p><input type="number" max="10" min="1" step="1">
+        <h1>Aerolinas</h1>
+        <ol>
+            @foreach (string aereos in ViewBag.ListaAereos)
+            {                 
+                <li><img src = "~/img/@aereos"></li>
+            }
+        </ol>
+        <p>Seleccione una opcion </p><input type="number" max="10" min="1" step="1">
+        <h1>Excursiones</h1>
+        <ol>
+            @foreach (string excursion in ViewBag.ListaExcursiones)
+            {
+                <li><img src="~/img/@excursion"></li>
+            }
+        </ol>
+        <p>Seleccione una opcion </p><input type="number" max="10" min="1" step="1">
+        <p><input type="Submit" value="Crear Paquete"></p>   
+    </form>
+</body>
+</html>

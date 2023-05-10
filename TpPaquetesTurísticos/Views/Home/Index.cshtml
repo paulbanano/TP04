@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>TP XX -  Index</h1>
+<a href='@Url.Action("SelectPaquete")'>Crear un nuevo paquete</a>
+@foreach (int Paquete in ViewBag.dicPaquetes)
+{
+    <p>@Paquete</p>
+}
